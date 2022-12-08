@@ -12,4 +12,13 @@ class UserController extends Controller
         return view("users",["users"=>$data]);
 
     }
+
+    function getData(Request $req)
+    {
+        $req->validate([
+            'username'=>'required | max:10',
+            'password'=>'required | min:5'
+        ]);
+        return $req->input();
+    }
 }
