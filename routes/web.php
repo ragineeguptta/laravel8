@@ -25,7 +25,7 @@ Route::view("contact","/contact");
 Route::post("users",[UserController::class,'getData']);
 
 Route::view("noaccess","noaccess");
-Route::view("home","home");
+Route::view("home","home")->middleware('protectedPage');
 
 Route::group(['middleware'=>['protectPage']],function(){
     Route::view('users','users');
