@@ -16,7 +16,7 @@ class checkAge
      */
     public function handle(Request $request, Closure $next)
     {
-        echo "global message for all page";
+        // echo "global message for all page";
         if($request->age && $request->age<18){
             return redirect('noaccess');
         }
