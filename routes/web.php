@@ -23,4 +23,10 @@ Route::view("contact","/contact");
 // Route::get('user/{id}',[UserController::class,'show']);
 // Route::get("users",[UserController::class,'loadView']);
 Route::post("users",[UserController::class,'getData']);
-Route::view("users","/users");
+
+Route::view("noaccess","noaccess");
+Route::view("home","home")->middleware('protectedPage');
+
+Route::group(['middleware'=>['protectPage']],function(){
+    Route::view('users','users');
+});
