@@ -21,4 +21,4 @@ Route::view('about','/about');
 Route::view("contact","/contact");
 
 // Route::get('user/{id}',[UserController::class,'show']);
-Route::view("users","users");
+Route::get("users",[UserController::class,'loadView']);

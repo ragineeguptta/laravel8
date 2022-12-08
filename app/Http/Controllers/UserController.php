@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    function show($id){
-        return $id;
+    function loadView()
+    {
+        $data=['Raag','Rohit','Amit','Vikas','Abhay'];
+        return view("users",["users"=>$data]);
+
     }
 }
