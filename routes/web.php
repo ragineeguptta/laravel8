@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserapiController;
 use App\Http\Controllers\UserformController;
+use App\Http\Controllers\UserAuth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,4 +40,26 @@ Route::get("usersapi",[UserapiController::class,'index']);
 
 Route::delete("usersform",[UserformController::class,'testRequest']);
 
-Route::view("login",'usersform');
+Route::view("loginform",'usersform');
+
+ Route::view("login",'login');
+Route::view("profile",'profile');
+Route::post("userlogin",[UserAuth::class,'userLogin']);
+
+Route::get('/logout', function ()
+{
+    if(session()->has('username'))
+    {
+        session()->pull('username',null);
+    }
+    return redirect('login');
+});
+
+Route::get('/login', function ()
+{
+    if(session()->has('username'))
+    {
+        return redirect('profile');
+    }
+    return redirect('login');
+});
