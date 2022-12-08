@@ -1,9 +1,24 @@
-<x-header componentName="Users" />
+<h1>User Login</h1>
+<form action="users" method="POST">
+  @csrf
+  <input type="text" name="username" placeholder="enter user id" />
+  <br><br>
+  <input type="password" name="password" placeholder="enter user password">
+  <br><br>
+  <button type="submit">Login</button>
+</form>
+
+
+
+
+
+
+{{-- <x-header componentName="Users" />
 
 <h1>User Page</h1>
 <h2>{{10+32}}</h2>
 @include('inner')
-@csrf
+@csrf --}}
 
 {{-- @if ($name=="Raginee")
    
@@ -20,7 +35,7 @@
     <h5>{{$user}}</h5>
 @endforeach --}}
 
-<script>
+{{-- <script>
     var data = @json($users);
     console.warn(data);
-</script>
+</script> --}}
