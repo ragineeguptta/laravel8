@@ -31,4 +31,5 @@ Route::view("contact","/contact");
 //     Route::view('users','users');
 // });
 
- Route::get("users",[UserController::class,'index']);
+//  Route::get("users",[UserController::class,'index']);
+Route::get("users",[UserController::class,'getData']);
