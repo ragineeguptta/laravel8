@@ -1,3 +1,5 @@
+<h1>Welcome to the website</h1>
+
 <h1>User Login</h1>
 
 {{-- {{$errors}} --}}

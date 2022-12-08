@@ -24,3 +24,4 @@ Route::view("contact","/contact");
 // Route::get("users",[UserController::class,'loadView']);
 Route::post("users",[UserController::class,'getData']);
 Route::view("users","/users");
+Route::view("noaccess","noaccess");
