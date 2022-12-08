@@ -2,8 +2,8 @@
 
 <h1>User Page</h1>
 <h2>{{10+32}}</h2>
-
-
+@include('inner')
+@csrf
 
 {{-- @if ($name=="Raginee")
    
@@ -11,11 +11,16 @@
 @else
   <h3>Hello </h3>
 @endif --}}
-
+{{-- 
 @for ($i = 0; $i < 10; $i++)
     <h4>{{$i}}</h4>
 @endfor
 
 @foreach ($users as $user)
     <h5>{{$user}}</h5>
-@endforeach
+@endforeach --}}
+
+<script>
+    var data = @json($users);
+    console.warn(data);
+</script>
