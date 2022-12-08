@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserapiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,4 @@ Route::view("contact","/contact");
 
 //  Route::get("users",[UserController::class,'index']);
 Route::get("users",[UserController::class,'getData']);
+Route::get("usersapi",[UserapiController::class,'index']);
