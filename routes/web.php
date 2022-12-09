@@ -42,7 +42,7 @@ Route::delete("usersform",[UserformController::class,'testRequest']);
 
 Route::view("loginform",'usersform');
 
- Route::view("login",'login');
+// Route::view("login",'login');
 Route::view("profile",'profile');
 Route::post("userlogin",[UserAuth::class,'userLogin']);
 
@@ -61,5 +61,5 @@ Route::get('/login', function ()
     {
         return redirect('profile');
     }
-    return redirect('login');
+    return view('login');
 });
