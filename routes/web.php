@@ -72,3 +72,10 @@ Route::post('storecontroller',[StoreController::class,'storeM']);
 
 Route::view('upload','upload');
 Route::post('upload',[UploadController::class,'index']);
+
+
+Route::get('/localizedprofile/{lang}',function ($lang)
+{
+    App::setlocale($lang);
+    return view('localizedprofile');
+});
