@@ -19,5 +19,11 @@ class MemberController extends Controller
         $member->address=$req->address;
         $member->save();
         return redirect('add');
+    }
+
+     function delete($id){
+        $data = Member::find($id);
+        $data->delete();
+        return redirect('list');
      }
 }
