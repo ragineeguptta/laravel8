@@ -8,7 +8,8 @@ class MemberController extends Controller
 {
     //
     function show(){
-        $data = Member::all();
+       // $data = Member::all();
+       $data = Member::paginate(2);
         return view('list',['members'=>$data]);
     }
 }
