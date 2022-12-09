@@ -6,6 +6,7 @@ use App\Http\Controllers\UserapiController;
 use App\Http\Controllers\UserformController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\UploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,3 +69,6 @@ Route::get('/login', function ()
 Route::view('store','storeuser');
 
 Route::post('storecontroller',[StoreController::class,'storeM']);
+
+Route::view('upload','upload');
+Route::post('upload',[UploadController::class,'index']);
