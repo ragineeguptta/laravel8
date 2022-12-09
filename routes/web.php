@@ -7,6 +7,7 @@ use App\Http\Controllers\UserformController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\MemberController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,3 +80,5 @@ Route::get('/localizedprofile/{lang}',function ($lang)
     App::setlocale($lang);
     return view('localizedprofile');
 });
+
+Route::get('list',[MemberController::class,'show']);
