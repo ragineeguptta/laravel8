@@ -11,6 +11,31 @@ class MemberController extends Controller
        // $data = Member::all();
        $data = Member::paginate(2);
         return view('list',['members'=>$data]);
+
+
+        //Query Builder
+        // return DB::table('members')->get();
+
+        // return (array)DB::table('members')->find(4);
+
+        // return DB::table('members')->count();
+        
+        // return DB::table('members')
+        // ->where('id',4)
+        // ->get();
+        
+        // return DB::table('members')
+        // ->insert([
+         //   'name'=>'sfn'
+          //   ])
+        // ->get();
+
+        // return DB::table('members')
+        // ->where('id',2)
+        // ->update([
+         //   'name'=>'sfn'
+          //   ])
+        // ->get();
     }
     function addData(Request $req){
         $member = new Member;
