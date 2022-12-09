@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserapiController;
 use App\Http\Controllers\UserformController;
 use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\StoreController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,3 +64,7 @@ Route::get('/login', function ()
     }
     return view('login');
 });
+
+Route::view('store','storeuser');
+
+Route::post('storecontroller',[StoreController::class,'storeM']);
