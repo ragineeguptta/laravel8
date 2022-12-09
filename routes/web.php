@@ -85,3 +85,5 @@ Route::get('list',[MemberController::class,'show']);
 Route::view('add','addmember');
 Route::post("add",[MemberController::class,'addData']);
 Route::get("delete/{id}",[MemberController::class,'delete']);
+Route::get("edit/{id}",[MemberController::class,'showData']);
+Route::post("edit",[MemberController::class,'update']);
