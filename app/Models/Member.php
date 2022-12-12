@@ -9,4 +9,11 @@ class Member extends Model
 {
     use HasFactory;
     public $timestamps=false;
+
+    function getNameAttribute($value){
+        return ucfirst($value);
+    }
+    function getAddressAttribute($value){
+        return $value.", india";
+    }
 }

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class {{ class }} extends Controller
 {
     //
-    function index(Request $req){
+    function index(){
         return "some code";
     }
 }
