@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserapiController;
 use App\Http\Controllers\UserformController;
@@ -23,6 +24,15 @@ use App\Http\Controllers\OnetomanyController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Fluent Strings
+$info = "hi, let's learn";
+// $info = Str::ucfirst($info);
+// $info=Str::replaceFirst("Hi","Hello", $info);
+// $info=Str::camel($info);
+$info =Str::of($info)->ucfirst($info)->replaceFirst("Hi","Hello", $info)->camel($info);
+echo $info;
+
 
 Route::get('/', function () {
     return view('welcome');
