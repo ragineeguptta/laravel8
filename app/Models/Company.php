@@ -11,4 +11,7 @@ class Company extends Model
     function companyData(){
         return $this->hasOne('App\Models\Employee');
     }
+    function manyData(){
+        return $this->hasMany('App\Models\Employee');
+    }
 }
