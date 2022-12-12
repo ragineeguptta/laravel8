@@ -10,6 +10,10 @@ class AccessorsController extends Controller
 {
     //
     function index(){
-        return Member::all();
+        $member = new Member;
+        $member->name="Raag";
+        $member->email="bruce@dg.rer";
+        $member->address="Mumbai";
+        $member->save();
     }
 }
