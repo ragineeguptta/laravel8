@@ -11,6 +11,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\AggreegateController;
 use App\Http\Controllers\JoinsController;
 use App\Http\Controllers\AccessorsController;
+use App\Http\Controllers\OnetooneController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -94,3 +95,5 @@ Route::post("edit",[MemberController::class,'update']);
 Route::get('Aggreegatelist',[AggreegateController::class,'operations']);
 Route::get('joins',[JoinsController::class,'getData']);
 Route::get('accessor',[AccessorsController::class,'index']);
+
+Route::get('Onetoone',[OnetooneController::class,'index']);
