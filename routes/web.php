@@ -12,6 +12,7 @@ use App\Http\Controllers\AggreegateController;
 use App\Http\Controllers\JoinsController;
 use App\Http\Controllers\AccessorsController;
 use App\Http\Controllers\OnetooneController;
+use App\Http\Controllers\OnetomanyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -97,3 +98,5 @@ Route::get('joins',[JoinsController::class,'getData']);
 Route::get('accessor',[AccessorsController::class,'index']);
 
 Route::get('Onetoone',[OnetooneController::class,'index']);
+
+Route::get('Onetomany',[OnetomanyController::class,'index']);
