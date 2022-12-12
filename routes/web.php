@@ -8,6 +8,8 @@ use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\AggreegateController;
+use App\Http\Controllers\JoinsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -87,3 +89,6 @@ Route::post("add",[MemberController::class,'addData']);
 Route::get("delete/{id}",[MemberController::class,'delete']);
 Route::get("edit/{id}",[MemberController::class,'showData']);
 Route::post("edit",[MemberController::class,'update']);
+
+Route::get('Aggreegatelist',[AggreegateController::class,'operations']);
+Route::get('joins',[JoinsController::class,'getData']);
