@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\device;
+use Validator;
 
 class deviceAPIController extends Controller
 {
@@ -57,5 +58,27 @@ class deviceAPIController extends Controller
      function search($string)
      {
        return device::where("deviceName","like", "%".$string."%")->get();
+     }
+     function testvalidate(Request $req)
+     {
+        $rules=array(
+            "deviceName"=>"required | max:20"
+        );
+        $validator= Validator::make($req->all(),$rules);
+        if ($validator->fails()) {
+            return response()->json($validator->errors(),401);
+        } else {
+            $device= new device;
+            $device->deviceName=$req->deviceName;
+            $result = $device->save();
+              if ($result) {
+                return ['result'=>'Data has been posted'];
+               }
+                else {
+                return ['result'=>'Data has  been failed'];
+               }
+        }
+        
+       
      }
 }

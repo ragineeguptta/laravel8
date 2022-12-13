@@ -26,3 +26,4 @@ Route::post("add",[deviceAPIController::class,'add']);
 Route::put("update",[deviceAPIController::class,'update']);
 Route::delete("delete/{id}",[deviceAPIController::class,'deletedevice']);
 Route::get("search/{string}",[deviceAPIController::class,'search']);
+Route::post("validate",[deviceAPIController::class,'testvalidate']);
