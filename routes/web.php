@@ -14,6 +14,7 @@ use App\Http\Controllers\AccessorsController;
 use App\Http\Controllers\OnetooneController;
 use App\Http\Controllers\OnetomanyController;
 use App\Http\Controllers\deviceController;
+use App\Mail\SampleMail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -101,4 +102,8 @@ Route::get('accessor',[AccessorsController::class,'index']);
 Route::get('Onetoone',[OnetooneController::class,'index']);
 
 Route::get('Onetomany',[OnetomanyController::class,'index']);
+
+Route::get('samplemail',function(){
+    return new SampleMail();
+});
 Route::get('device/{key:deviceName}',[deviceController::class,'index']);
