@@ -9,7 +9,11 @@ use App\Models\device;
 class deviceAPIController extends Controller
 {
     //
-    function index(){
-         return device::all();
-    }
+    // function index(){
+    //      return device::all();
+    // }
+
+    function list($id=null){
+        return $id?device::find($id):device::all();
+   }
 }
