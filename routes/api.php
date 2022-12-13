@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dummyAPI;
 use App\Http\Controllers\deviceAPIController;
+use App\Http\Controllers\APIResourceController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,3 +28,6 @@ Route::put("update",[deviceAPIController::class,'update']);
 Route::delete("delete/{id}",[deviceAPIController::class,'deletedevice']);
 Route::get("search/{string}",[deviceAPIController::class,'search']);
 Route::post("validate",[deviceAPIController::class,'testvalidate']);
+
+
+Route::apiResource("apiWithResource",APIResourceController::class);
