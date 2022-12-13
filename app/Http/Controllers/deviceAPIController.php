@@ -53,4 +53,9 @@ class deviceAPIController extends Controller
             return ['result'=>'Deleted operation Failed'.$id];
         }
      }
+
+     function search($string)
+     {
+       return device::where("deviceName","like", "%".$string."%")->get();
+     }
 }
