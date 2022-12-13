@@ -42,4 +42,15 @@ class deviceAPIController extends Controller
         
         
      }
+
+     function deletedevice($id)
+     {
+        $device = device::find($id);
+        $result=$device->delete();
+        if ($result) {
+            return ['result'=>'Data has been Deleted'.$id];
+        } else {
+            return ['result'=>'Deleted operation Failed'.$id];
+        }
+     }
 }

@@ -24,3 +24,4 @@ Route::get("data",[dummyAPI::class,'index']);
 Route::get("device/{id?}",[deviceAPIController::class,'list']);
 Route::post("add",[deviceAPIController::class,'add']);
 Route::put("update",[deviceAPIController::class,'update']);
+Route::delete("delete/{id}",[deviceAPIController::class,'deletedevice']);
