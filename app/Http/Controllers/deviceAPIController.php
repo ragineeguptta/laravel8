@@ -16,4 +16,17 @@ class deviceAPIController extends Controller
     function list($id=null){
         return $id?device::find($id):device::all();
    }
+   function add(Request $req)
+   {
+       $device= new device;
+       $device->deviceName=$req->deviceName;
+       $result = $device->save();
+       if ($result) {
+        return ['result'=>'Data has been posted'];
+       } else {
+        return ['result'=>'Data has  been failed'];
+       }
+       
+       
+    }
 }
