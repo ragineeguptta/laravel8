@@ -6,6 +6,7 @@ use App\Http\Controllers\dummyAPI;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\deviceAPIController;
 use App\Http\Controllers\APIResourceController;
+use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,6 +34,8 @@ Route::get("search/{string}",[deviceAPIController::class,'search']);
 Route::post("validate",[deviceAPIController::class,'testvalidate']);
 
 Route::post("login",[UserController::class,'index']);
+
+Route::post("Files",[FileController::class,'index']);
 
 
 Route::apiResource("apiWithResource",APIResourceController::class);
