@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class device extends Model
 {
     use HasFactory;
+    public $timestamps=false;
 }
