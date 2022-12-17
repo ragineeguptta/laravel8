@@ -15,6 +15,7 @@ use App\Http\Controllers\AccessorsController;
 use App\Http\Controllers\OnetooneController;
 use App\Http\Controllers\OnetomanyController;
 use App\Http\Controllers\deviceController;
+use App\Http\Controllers\SecondController;
 use App\Mail\SampleMail;
 /*
 |--------------------------------------------------------------------------
@@ -117,3 +118,4 @@ Route::get('samplemail',function(){
     return new SampleMail();
 });
 Route::get('device/{key:deviceName}',[deviceController::class,'index']);
+Route::get('second',[SecondController::class,'index']);
